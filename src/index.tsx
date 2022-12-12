@@ -41,7 +41,7 @@ export const App = () => {
   }, interval)
 
   return (
-    <main className="max-h-screen h-screen overflow-hidden bg-gray-900">
+    <main className="max-h-screen h-screen overflow-hidden relative  bg-gray-900">
       {fallingItems.map(({ xIndex, zIndex, id, textClass }) => (
         <Falling key={id} zIndex={zIndex} xIndex={xIndex}>
           <div className={`${textClass} text- text-shadow`}>NOICE</div>
