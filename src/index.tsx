@@ -10,6 +10,13 @@ const textClasses = [
   'text-lime-400',
 ] as const
 
+const values = [
+  'Chris...',
+  'What is our name?',
+  'primesightsmakai',
+  '.ninja',
+] as const
+
 interface FallingItem {
   zIndex: number
   xIndex: number
@@ -44,7 +51,9 @@ export const App = () => {
     <main className="max-h-screen h-screen overflow-hidden relative  bg-gray-900">
       {fallingItems.map(({ xIndex, zIndex, id, textClass }) => (
         <Falling key={id} zIndex={zIndex} xIndex={xIndex}>
-          <div className={`${textClass} text- text-shadow`}>NOICE</div>
+          <div className={`${textClass} text- text-shadow`}>
+            {values[id % 4]}
+          </div>
         </Falling>
       ))}
     </main>
